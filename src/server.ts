@@ -1,6 +1,7 @@
 import express, { NextFunction, Request, Response } from "express";
 import { userRouter } from "./routes/user";
 import { bookRouter } from "./routes/books";
+import router from "./db/postgresql/book";
 
 const app = express();
 const port = 3000;
@@ -11,6 +12,9 @@ app.use(express.json());
 // Routes
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/books", bookRouter);
+
+// Postgresql route test
+app.use("/books", router);
 
 // Server route
 app.get("/", (req: Request, res: Response) => {

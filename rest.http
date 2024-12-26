@@ -1,6 +1,7 @@
 @rootURL = http://localhost:3000
 @apiEP = {{rootURL}}/api/v1
 @userAPI = {{apiEP}}/users
+@bookPostgresqlAPI = {{apiEP}}/books
 
 
 ### login
@@ -14,3 +15,6 @@ Content-Type: application/json
 
 ### Get All users
 GET {{userAPI}}
+
+###
+GET http://localhost:3000/books
