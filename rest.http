@@ -17,4 +17,4 @@ Content-Type: application/json
 GET {{userAPI}}
 
 ###
-GET http://localhost:3000/books
+GET http://localhost:3000/products?page=5&limit=10
